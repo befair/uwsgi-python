@@ -4,11 +4,11 @@ MAINTAINER Antonio Esposito "kobe@befair.it"
 
 ENV DEBIAN_FRONTEND         noninteractive
 
+ENV UWSGI_AUTOLOAD          false
 ENV PYTHONUNBUFFERED        1
 ENV PYTHONPATH              /code:/usr/local/lib/python3.4/site-packages
 ENV UWSGI_CALLABLE          app
-ENV UWSGI_PYTHON_AUTORELOAD 1
-#ENV UWSGI_PY_TRACEBACKER
+ENV UWSGI_PY_TRACEBACKER    /tmp/tracebacker
 
 ENV UWSGI_MASTER            true
 ENV UWSGI_MASTER_AS_ROOT    true
@@ -20,7 +20,7 @@ ENV UWSGI_VACUUM            true
 ENV UWSGI_LOG_DATE          true
 
 ENV UWSGI_LAZY_APPS         false
-ENV UWSGI_WORKERS           2
+ENV UWSGI_WORKERS           4
 ENV UWSGI_THREADS           1
 ENV UWSGI_ENABLE_THREADS    true
 ENV UWSGI_BUFFER_SIZE       65536
