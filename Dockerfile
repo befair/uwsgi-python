@@ -1,7 +1,5 @@
 FROM python:3.4.1
 
-MAINTAINER Antonio Esposito "kobe@befair.it"
-
 ENV DEBIAN_FRONTEND         noninteractive
 
 ENV UWSGI_AUTOLOAD          false
